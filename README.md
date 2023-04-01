@@ -1,3 +1,6 @@
+# this project hosted on firebase
+Open [https://react-hooks-blogs-3fcc9.web.app/](https://react-hooks-blogs-3fcc9.web.app/) to view it in your browser.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
