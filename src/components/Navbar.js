@@ -4,6 +4,7 @@ function Navbar() {
       <div className="navbar">
         <ul id="nav">
             <li><Link to="/">Home</Link></li>
+            <li><Link to="/post:postId">Post Detail</Link></li>
             <li><Link to="/create-post">Create Post</Link></li>
         </ul>
       </div>

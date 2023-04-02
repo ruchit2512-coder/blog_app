@@ -1,10 +1,12 @@
-import { useState } from 'react';
 import { useFormInput } from '../hooks';
+import { firestore } from '../firebase';
+import { useNavigate } from "react-router-dom";
 
 function CreatePost() {
   const title= useFormInput();
   const subTitle = useFormInput();
   const content= useFormInput();
+  const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -12,6 +14,14 @@ function CreatePost() {
     console.log('title', title.value);
     console.log('subTitle', subTitle.value);
     console.log('content', content.value);
+
+    firestore.collection('posts').add({
+        title:title.value,
+        subtitle:subTitle.value,
+        content:content.value
+    })
+
+    navigate("/");
   }
 
   return (
